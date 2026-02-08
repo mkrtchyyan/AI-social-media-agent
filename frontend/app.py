@@ -9,10 +9,11 @@ import os
 import json
 from datetime import datetime
 
-# Add backend to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend'))
+# Add project root to path
+_project_root = os.path.join(os.path.dirname(__file__), '..')
+sys.path.insert(0, os.path.abspath(_project_root))
 
-from app import SocialMediaAgent
+from backend.app import SocialMediaAgent
 
 # Page configuration
 st.set_page_config(
