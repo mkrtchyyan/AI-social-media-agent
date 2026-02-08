@@ -5,10 +5,10 @@ This orchestrates all the components and handles the main workflow
 
 import os
 from dotenv import load_dotenv
-from brand_analyzer import BrandAnalyzer
-from post_generator import PostGenerator
-from feedback_loop import FeedbackLoop
-from image_generator import ImageGenerator
+from .brand_analyzer import BrandAnalyzer
+from .post_generator import PostGenerator
+from .feedback_loop import FeedbackLoop
+from .image_generator import ImageGenerator
 import json
 from datetime import datetime
 
