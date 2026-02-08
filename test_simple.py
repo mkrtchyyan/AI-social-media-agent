@@ -97,17 +97,24 @@ def test_simple_api_call():
 
 
 if __name__ == "__main__":
+    import sys
+    skip_api = "--skip-api" in sys.argv or "-s" in sys.argv
+
     print("=" * 50)
     print("AI SOCIAL MEDIA AGENT - SETUP TEST")
     print("=" * 50)
-    
+    if skip_api:
+        print("(API connectivity test skipped)")
+
     # Run all tests
     tests = [
         ("API Keys", test_api_keys),
         ("Package Imports", test_imports),
         ("Directories", test_directories),
-        ("API Connectivity", test_simple_api_call)
+        ("API Connectivity", test_simple_api_call),
     ]
+    if skip_api:
+        tests = [t for t in tests if t[0] != "API Connectivity"]
     
     results = []
     for test_name, test_func in tests:
@@ -131,8 +138,8 @@ if __name__ == "__main__":
     if all_passed:
         print("\n🎉 All tests passed! You're ready to go!")
         print("\nRun the app with:")
-        print("  cd frontend")
-        print("  streamlit run app.py")
+        print("  streamlit run frontend/app.py")
+        print("\nThen open http://localhost:8501 in your browser")
     else:
         print("\n⚠️ Some tests failed. Please fix the issues above.")
         print("\nNeed help?")

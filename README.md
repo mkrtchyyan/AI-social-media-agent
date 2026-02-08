@@ -45,12 +45,19 @@ python test_simple.py
 All tests should pass ✅
 
 ### 5. Run the App
+
+From the project root:
+```bash
+streamlit run frontend/app.py
+```
+
+Or from the frontend folder:
 ```bash
 cd frontend
 streamlit run app.py
 ```
 
-The app will open in your browser at `http://localhost:8501`
+Open **http://localhost:8501** in your browser (Streamlit may open it automatically).
 
 ## Project Structure
 ```
@@ -155,7 +162,7 @@ Include: Partner logo, collaboration details
 
 ### "Module not found" errors
 - Make sure `backend/__init__.py` exists
-- Run commands from the root folder
+- Run from the project root: `streamlit run frontend/app.py`
 - Run `pip install -r requirements.txt` again
 
 ## Model Information
