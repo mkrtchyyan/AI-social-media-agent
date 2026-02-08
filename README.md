@@ -181,9 +181,10 @@ This project uses:
 
 ## License
 
-MIT License - feel free to use for your hackathon!
+MIT License 
 
 ## Support
 
 For issues or questions, create an issue in the repository.
+
 
